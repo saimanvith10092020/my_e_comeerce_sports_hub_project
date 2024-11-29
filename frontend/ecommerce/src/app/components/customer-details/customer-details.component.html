@@ -1,0 +1,52 @@
+<div
+  class="row justify-content-center"
+  style="
+    background-color: #231f20;
+    color: white;
+    height: 91vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  "
+>
+  <div class="col-6">
+    <h1 style="color: #ff5001;">{{ customer.firstName }}{{ customer.lastName }}</h1>
+    <hr />
+    <h6>{{ customer.email }}</h6>
+    <h6>{{ customer.mobile }}</h6>
+    <hr />
+  </div>
+  <div class="col-6">
+    <h4 style="color: #ff5001;">Personal Details</h4>
+    <table class="table table-secondary">
+      <tbody>
+        <tr>
+          <th>ID:</th>
+          <td>{{ customer.id }}</td>
+        </tr>
+        <tr>
+          <th>First Name:</th>
+          <td>{{ customer.firstName }}</td>
+        </tr>
+        <tr>
+          <th>Last Name:</th>
+          <td>{{ customer.lastName }}</td>
+        </tr>
+        <tr>
+          <th>Email:</th>
+          <td>{{ customer.email }}</td>
+        </tr>
+        <tr>
+          <th>Mobile Name:</th>
+          <td>{{ customer.mobile }}</td>
+        </tr>
+        <tr>
+          <th>Password:</th>
+          <td>{{ customer.password }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+  </div>
+</div>

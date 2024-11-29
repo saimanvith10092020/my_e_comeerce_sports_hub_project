@@ -1,0 +1,40 @@
+<div
+  class="container-fluid"
+  style="
+    background-color: #231f20;
+    color: #efefef;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  "
+>
+  <div class="row justify-content-center align-items-center">
+    <div class="col-4">
+      <img
+        [src]="product.imageUrl"
+        alt=""
+        width="300px"
+        height="300px"
+        style="box-shadow: 0px 0px 50px 2px #ff5001"
+      />
+    </div>
+    <div class="col-3"></div>
+    <div class="col-4" style="border-left: 2px solid white; padding-left: 30px">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.unitPrice | currency : "INR" }}</p>
+      <p>{{ product.description }}</p>
+
+      <button
+        (click)="addToCart()"
+        class="btn btn-sm"
+        style="background-color: #ff5001; color: #efefef"
+      >
+        Add to cart
+      </button>
+    </div>
+  </div>
+</div>
+<div>
+  <app-all-product-list></app-all-product-list>
+</div>

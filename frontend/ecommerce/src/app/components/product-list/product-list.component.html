@@ -1,0 +1,33 @@
+<div class="container-fluid py-4" style="background-color: #231f20;">
+  <div class="row">
+    <div *ngIf="products.length === 0" class="alert alert-danger">
+      No products found
+    </div>
+
+    <div *ngFor="let product of products" class="col-2">
+      <div class="card mb-3" style="background-color: #efefef; border: 1px solid #b3aea8;">
+        <a routerLink="/products/{{ product.id }}" style="display: flex; justify-content: center; align-items: center; padding: 5px;">
+          <img
+            [src]="product.imageUrl"
+            [alt]="product.imageUrl"
+            class="card-img-top"
+            style="width: 200px; height: 200px;"
+          />
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">
+            <a routerLink="/products/{{ product.id }}" style="text-decoration: none; color: black;">
+              {{ product.name }}
+            </a>
+          </h5>
+          <p class="card-text">
+            {{ product.unitPrice | currency : "INR" }}
+          </p>
+          <button class="btn btn-sm" (click)="addToCart(product)" style="background-color: #ff5001; color: white; border: 1px solid #231f20;">
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
